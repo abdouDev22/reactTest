@@ -8,6 +8,8 @@ function App() {
 
   const increment = () =>{
     setCout(count+1)
+    setCout((c)=>c+1)
+    setCout((c)=>c+1)
   }
 
   return (
