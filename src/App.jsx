@@ -4,17 +4,23 @@ import { useState } from "react";
 function App() {
   
 
-  const [count,setCout]= useState(0);
+  
+
+  const [person, setPerson]=useState({
+    firstname:'Abdou',
+    lastname:'Abdillahi',
+    age:3
+  })
+
+  
 
   const increment = () =>{
-    setCout(count+1)
-    setCout((c)=>c+1)
-    setCout((c)=>c+1)
+    setPerson({...person, age: person.age+1})
   }
 
   return (
     <>
-  <p>compteur : {count}</p>
+  <p>compteur : {person.age}</p>
   <button onClick={increment}>incremente</button>
     </>
   )
